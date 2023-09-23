@@ -1,2 +1,4 @@
-myVar = 333;
-console.log(myVar);
+#!/usr/bin/node
+(function modify() {
+    myVar = 333
+  })()
