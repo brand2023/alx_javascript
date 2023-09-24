@@ -1,4 +1,5 @@
+#!/usr/bin/node
 const request = require('request');
-request('https://intranet.alxswe.com', function (response){
-    console.log('code:', response && response.statusCode);
+request.get(process.argv[1], function (response){
+    console.log('code:', response.statusCode);
 })
