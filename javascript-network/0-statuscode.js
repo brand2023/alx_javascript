@@ -1,6 +1,8 @@
 #!/usr/bin/node
-const request = require('request');
-req.get(process.argv[2], {encoding: 'UTF-8'})
-.on('response' , (response) => {
-    console.log("code:",response.statusCode);
-})
+const request = require("request");
+
+const url = process.argv[2];
+
+request.get(url, function (error, response, body) {
+  console.log("code:", response && response.statusCode);
+});
